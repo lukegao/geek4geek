@@ -2,19 +2,11 @@
 """
 Source: http://www.geeksforgeeks.org/lowest-common-ancestor-binary-tree-set-1/
 """
+from lca import Node
+
 
 # Python program to find LCA of n1 and n2 using one
 # traversal of Binary tree
-
-
-class Node(object):
-
-    # Constructor to create a new tree node
-    def __init__(self, key):
-        self.key = key
-        self.left = None
-        self.right = None
-
 
 # This function returns pointer to LCA of two given
 # values n1 and n2
@@ -53,11 +45,12 @@ root.left = Node(2)
 root.right = Node(3)
 root.left.left = Node(4)
 root.left.right = Node(5)
+root.left.right.left = Node(8)
 root.right.left = Node(6)
 root.right.right = Node(7)
-print "LCA(4,5) = ", findLCA(root, 4, 5).key
-print "LCA(4,6) = ", findLCA(root, 4, 6).key
-print "LCA(3,4) = ", findLCA(root, 3, 4).key
-print "LCA(2,4) = ", findLCA(root, 2, 4).key
+print("LCA(4,8) = ", findLCA(root, 4, 8).key)
+print("LCA(4,6) = ", findLCA(root, 4, 6).key)
+print("LCA(6,8) = ", findLCA(root, 6, 8).key)
+print("LCA(2,4) = ", findLCA(root, 2, 4).key)
 
 # This code is contributed by Nikhil Kumar Singh(nickzuck_007)
