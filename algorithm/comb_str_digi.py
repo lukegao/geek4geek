@@ -10,6 +10,14 @@ Given an input string of numbers, find all combinations of numbers that can be
 
 
 def resolve(instr, index, value):
+    """
+    Recursion func to traverse binary tree
+
+    :param instr: Input string to be split.
+    :param index: Current index in input string.
+    :param value: Value stored in tree node which passed through the 
+      traversing process.
+    """
     if index >= len(instr):
         print(value)
         return
